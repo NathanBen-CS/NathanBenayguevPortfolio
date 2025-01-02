@@ -28,7 +28,7 @@ const Portfolio = () => {
         "Used GitHub for version control and security management"
       ],
       link: "www.shinycleandetailing.com",
-      image: "/shiny.png"
+      image: "/shiny.PNG"
     },
     {
       title: "Cashier/SCO Host",
