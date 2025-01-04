@@ -14,7 +14,7 @@ const Portfolio = () => {
         "Optimized SEO using KPIs, Google Analytics, and Hotjar",
         "Managed website maintenance and security with Elementor Panel"
       ],
-      link: "www.airpoint.ca",
+      link: "http://www.airpoint.ca",
       image: "/air.png"
     },
     {
@@ -27,7 +27,7 @@ const Portfolio = () => {
         "Implemented back-end functionalities using MailGun, Papa Parse and Car Models API",
         "Used GitHub for version control and security management"
       ],
-      link: "www.shinycleandetailing.com",
+      link: "http://www.shinycleandetailing.com",
       image: "/shiny.PNG"
     },
     {
