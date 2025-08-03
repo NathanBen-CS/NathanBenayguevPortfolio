@@ -752,7 +752,7 @@ const PortfolioHomepage = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-12">
+            <div className="grid md:grid-cols-1 gap-12">
               <div className="bg-[#1E243D] rounded-2xl p-8 border border-[#2A3150] hover:border-[#6C63FF]/40 transition-colors">
                 <h3 className="text-2xl font-semibold mb-6 text-[#4DE3C1]">Contact Information</h3>
                 <div className="space-y-6">
@@ -787,46 +787,6 @@ const PortfolioHomepage = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-              
-              <div className="bg-[#1E243D] rounded-2xl p-8 border border-[#2A3150] hover:border-[#6C63FF]/40 transition-colors">
-                <h3 className="text-2xl font-semibold mb-6 text-[#4DE3C1]">Send Me a Message</h3>
-                <form className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-[#A0A8C0] mb-2">Your Name</label>
-                    <input 
-                      type="text" 
-                      id="name" 
-                      className="w-full bg-[#2A3150] border border-[#3A4260] rounded-lg px-4 py-3 text-[#F0F4FF] focus:outline-none focus:ring-2 focus:ring-[#6C63FF] focus:border-transparent transition-all"
-                      placeholder="John Doe"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-[#A0A8C0] mb-2">Email Address</label>
-                    <input 
-                      type="email" 
-                      id="email" 
-                      className="w-full bg-[#2A3150] border border-[#3A4260] rounded-lg px-4 py-3 text-[#F0F4FF] focus:outline-none focus:ring-2 focus:ring-[#6C63FF] focus:border-transparent transition-all"
-                      placeholder="john@example.com"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block text-[#A0A8C0] mb-2">Your Message</label>
-                    <textarea 
-                      id="message" 
-                      rows="4" 
-                      className="w-full bg-[#2A3150] border border-[#3A4260] rounded-lg px-4 py-3 text-[#F0F4FF] focus:outline-none focus:ring-2 focus:ring-[#6C63FF] focus:border-transparent transition-all"
-                      placeholder="Hello Nathan, I'd like to talk about..."
-                    ></textarea>
-                  </div>
-                  <button 
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-[#6C63FF] to-[#4DE3C1] text-white px-6 py-3 rounded-lg hover:shadow-lg hover:shadow-[#6C63FF]/30 transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
-                    <span>Send Message</span>
-                    <ArrowRight className="w-5 h-5" />
-                  </button>
-                </form>
               </div>
             </div>
           </div>

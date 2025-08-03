@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import { Code, Monitor, Smartphone, Mail, Search, Gamepad, Cpu, Rocket, ArrowLeft } from 'lucide-react';
+import { Code, Monitor, Smartphone, Mail, Search, Gamepad, Cpu, Rocket, ArrowLeft, Link } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const WorkSamples = () => {
   const projects = [
@@ -200,10 +201,13 @@ const WorkSamples = () => {
     }, 300);
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0A0E23] to-[#1A1F3A] text-[#F0F4FF] py-12 px-4 relative overflow-hidden">
       {/* Back button */}
       <button 
+        onClick={() => navigate('/')}
         className="fixed top-6 left-6 z-50 flex items-center space-x-2 bg-[#1E243D] hover:bg-[#2A3150] border border-[#2A3150] hover:border-[#6C63FF]/40 text-[#C3C8D3] hover:text-white px-4 py-2 rounded-full transition-all duration-300 shadow-lg"
       >
         <ArrowLeft className="w-5 h-5" />
