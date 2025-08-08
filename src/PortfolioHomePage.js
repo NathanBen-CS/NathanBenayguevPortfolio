@@ -230,6 +230,14 @@ const PortfolioHomepage = () => {
                 <span className="absolute inset-0 bg-gradient-to-r from-[#6C63FF]/10 to-[#4DE3C1]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               </button>
               <button 
+                onClick={() => navigate('/learning')}
+                className="group relative overflow-hidden bg-[#1E243D] border border-[#6C63FF]/30 text-white px-8 py-4 rounded-full hover:shadow-lg hover:shadow-[#6C63FF]/30 transition-all duration-300 flex items-center space-x-2"
+              >
+                <span className="relative z-10">View journal</span>
+                <Book className="w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" />
+                <span className="absolute inset-0 bg-gradient-to-r from-[#6C63FF]/10 to-[#4DE3C1]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+              </button>
+              <button 
                 onClick={() => scrollToSection('experience')}
                 className="flex items-center space-x-2 text-[#C3C8D3] hover:text-[#4DE3C1] transition-colors group"
               >
@@ -410,6 +418,44 @@ const PortfolioHomepage = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* About Me Video Section */}
+      <section id="about-video" className="relative py-20 px-6 bg-gradient-to-b from-[#0A0F1F] to-[#1E243D]">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-block mb-8 px-4 py-2 bg-[#1E243D] rounded-full border border-[#6C63FF]/30">
+            <span className="text-sm font-medium bg-gradient-to-r from-[#6C63FF] to-[#4DE3C1] bg-clip-text text-transparent">
+              My Story
+            </span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+            <span className="bg-gradient-to-r from-[#F5F7FA] via-[#6C63FF] to-[#4DE3C1] bg-clip-text text-transparent">
+              Why
+            </span>{' '}
+            <span className="bg-gradient-to-r from-[#4DE3C1] to-[#6C63FF] bg-clip-text text-transparent">
+              Me
+            </span>
+          </h2>
+          
+          {/* Video Container - Replace src with your actual video */}
+          <div className="relative rounded-xl overflow-hidden border border-[#6C63FF]/30 shadow-lg shadow-[#6C63FF]/10 animate-fade-in-up">
+            <iframe 
+              src="https://www.youtube.com/embed/gx02wUZL8U8" // Dummy link - replace with your video
+              className="w-full aspect-video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+            
+            {/* Decorative elements */}
+            <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-[#6C63FF]/50 rounded-tl-xl"></div>
+            <div className="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-[#4DE3C1]/50 rounded-br-xl"></div>
+          </div>
+        </div>
+        
+        {/* Decorative gradient blobs */}
+        <div className="absolute -bottom-20 left-0 w-64 h-64 bg-[#6C63FF]/20 rounded-full filter blur-3xl opacity-30"></div>
+        <div className="absolute -top-20 right-0 w-64 h-64 bg-[#4DE3C1]/20 rounded-full filter blur-3xl opacity-30"></div>
       </section>
 
       {/* Vision Section */}
