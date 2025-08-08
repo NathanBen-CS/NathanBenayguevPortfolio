@@ -440,7 +440,7 @@ const PortfolioHomepage = () => {
           {/* Video Container - Replace src with your actual video */}
           <div className="relative rounded-xl overflow-hidden border border-[#6C63FF]/30 shadow-lg shadow-[#6C63FF]/10 animate-fade-in-up">
             <iframe 
-              src="https://www.youtube.com/embed/gx02wUZL8U8" // Dummy link - replace with your video
+              src="whymevideo.mp4" // Dummy link - replace with your video
               className="w-full aspect-video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
