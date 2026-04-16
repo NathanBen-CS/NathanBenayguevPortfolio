@@ -1,9 +1,94 @@
 import { useState, useEffect, useRef } from 'react';
-import { Code, Monitor, Smartphone, Mail, Search, Gamepad, Cpu, Rocket, ArrowLeft, Link } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Code, Monitor, Smartphone, Mail, Search, Gamepad, Cpu, Rocket, Link, BrainCircuit, Bot, Terminal, Calendar } from 'lucide-react';
 
 const WorkSamples = () => {
   const projects = [
+    {
+      id: 7,
+      title: "Deep Learning & NLP Experiments",
+      category: "Machine Learning",
+      icon: <BrainCircuit className="w-5 h-5" />,
+      color: "from-blue-600 to-indigo-600",
+      highlights: [
+        "PyTorch GPT architecture",
+        "JAX MLP implementation",
+        "SVM classification pipeline"
+      ],
+      media: [
+        { type: "image", url: "/DeepLearning1.PNG", alt: "Deep Learning overview" },
+        { type: "image", url: "/DeepLearning2.png", alt: "Deep Learning visualization" },
+        { type: "image", url: "/DeepLearning3.png", alt: "Models comparison" },
+        { type: "image", url: "/DeepLearning4.png", alt: "Deep Learning metrics" }
+      ]
+    },
+    {
+      id: 8,
+      title: "Codebase Onboarding Agent",
+      category: "AI Tool Development",
+      icon: <Bot className="w-5 h-5" />,
+      color: "from-emerald-500 to-teal-600",
+      highlights: [
+        "Autonomous OODA loop agent",
+        "LLM-driven curriculum generation",
+        "Sandboxed execution layer"
+      ],
+      media: [
+        { type: "image", url: "/placeholder-agent.jpg", alt: "AI Agent placeholder" }
+      ]
+    },
+    {
+      id: 9,
+      title: "Cyber Risk Assessment Lab",
+      category: "Security",
+      icon: <Code className="w-5 h-5" />,
+      color: "from-red-600 to-rose-600",
+      highlights: [
+        "Metasploit vulnerability exploitation",
+        "Nmap network reconnaissance",
+        "Steganography forensics"
+      ],
+      media: [
+        { type: "image", url: "/CyberLab.png", alt: "Cyber Lab overview" },
+        { type: "image", url: "/CyberLab2.png", alt: "Cyber Lab attack surface" },
+        { type: "image", url: "/CyberLab3.png", alt: "Vulnerability exploitation" },
+        { type: "image", url: "/CyberLab4.png", alt: "Steganography investigation" }
+      ]
+    },
+    {
+      id: 10,
+      title: "xv6 OS Enhancements",
+      category: "System Programming",
+      icon: <Terminal className="w-5 h-5" />,
+      color: "from-gray-700 to-gray-900",
+      highlights: [
+        "Priority CPU scheduler",
+        "System call interface",
+        "Custom memory allocator"
+      ],
+      media: [
+        { type: "youtube", url: "https://www.youtube.com/embed/j4jnFnVKuZw", alt: "xv6 OS demo1" },
+        { type: "youtube", url: "https://www.youtube.com/embed/bzVwgMerdUw", alt: "xv6 OS demo2" },
+        { type: "youtube", url: "https://www.youtube.com/embed/q1MPsKbkxB4", alt: "xv6 OS demo3" }
+      ]
+    },
+    {
+      id: 11,
+      title: "YUEvents",
+      category: "Product Management",
+      icon: <Calendar className="w-5 h-5" />,
+      color: "from-yellow-500 to-red-500",
+      highlights: [
+        "Aggregated campus events platform",
+        "Agile documentation mgmt",
+        "Scraper-based data pipeline"
+      ],
+      media: [
+        { type: "youtube", url: "https://www.youtube.com/embed/Es_iVFYjaDQ", alt: "YUEvents demo1" },
+        { type: "image", url: "/yuprojburn.png", alt: "YUEvents placeholder" },
+        { type: "image", url: "/yuprojsched.png", alt: "YUEvents placeholder1" },
+        { type: "image", url: "/yuprojsched2.png", alt: "YUEvents placeholder2" },
+      ]
+    },
     {
       id: 1,
       title: "Nobl",
@@ -16,8 +101,8 @@ const WorkSamples = () => {
         "Playwright test automation"
       ],
       media: [
-        { type: "video", url: "/playwright.mp4", alt: "Nobl script" },
-        { type: "video", url: "/provider.mp4", alt: "provider dashboard" }
+        { type: "youtube", url: "https://www.youtube.com/embed/7hdDj-9ITKQ", alt: "Nobl script" },
+        { type: "youtube", url: "https://www.youtube.com/embed/tXkJw9K3YIA", alt: "provider dashboard" }
       ]
     },
     {
@@ -32,8 +117,8 @@ const WorkSamples = () => {
         "Automated reminder emails"
       ],
       media: [
-        { type: "video", url: "/VerveLessonGen.mp4", alt: "AI interface" },
-        { type: "video", url: "/vervedash.mp4", alt: "Student dashboard" }
+        { type: "youtube", url: "https://www.youtube.com/embed/2WHTpyGqxPM", alt: "AI interface" },
+        { type: "youtube", url: "https://www.youtube.com/embed/GIRH9CJf5oM", alt: "Student dashboard" }
       ]
     },
     {
@@ -48,8 +133,9 @@ const WorkSamples = () => {
         "Lead generation forms"
       ],
       media: [
-        { type: "video", url: "/quote.mp4", alt: "Service comparison" },
-        { type: "image", url: "/packages.jpg", alt: "Quote system" }
+        { type: "youtube", url: "https://www.youtube.com/embed/lkaMuJt9V6k", alt: "Service comparison" },
+        { type: "image", url: "/packages.jpg", alt: "Quote system" },
+        { type: "image", url: "/shiny.PNG", alt: "Shiny Clean Detailing homepage" }
       ]
     },
     {
@@ -79,7 +165,8 @@ const WorkSamples = () => {
         "Video demo available"
       ],
       media: [
-        { type: "video", url: "/false.mp4", alt: "False Alarm gameplay" }
+        { type: "video", url: "/false.mp4", alt: "False Alarm gameplay" },
+        { type: "image", url: "/False.PNG", alt: "False Alarm screenshot" }
       ]
     },
     {
@@ -94,7 +181,7 @@ const WorkSamples = () => {
         "Video documentation"
       ],
       media: [
-        { type: "video", url: "/goose.mp4", alt: "Goose Hunt gameplay" } 
+        { type: "video", url: "/goose.mp4", alt: "Goose Hunt gameplay" }
       ]
     },
   ];
@@ -103,7 +190,7 @@ const WorkSamples = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [activeMediaIndex, setActiveMediaIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  
+
   // Create a flat structure for video refs with unique keys
   const videoRefs = useRef({});
 
@@ -123,7 +210,7 @@ const WorkSamples = () => {
   useEffect(() => {
     const currentProject = projects[activeProject];
     const currentMedia = currentProject.media[activeMediaIndex];
-    
+
     // Pause all videos first
     Object.values(videoRefs.current).forEach(ref => {
       if (ref.current) {
@@ -131,16 +218,16 @@ const WorkSamples = () => {
         ref.current.currentTime = 0;
       }
     });
-    
+
     setIsPlaying(false);
-    
+
     // Play current video if it's a video type
     if (currentMedia?.type === 'video') {
       setTimeout(() => {
         const videoRef = getVideoRef(activeProject, activeMediaIndex);
         if (videoRef.current) {
           const playPromise = videoRef.current.play();
-          
+
           if (playPromise !== undefined) {
             playPromise
               .then(() => setIsPlaying(true))
@@ -180,7 +267,7 @@ const WorkSamples = () => {
   const navigateProject = (direction) => {
     setIsTransitioning(true);
     setTimeout(() => {
-      setActiveProject((prev) => 
+      setActiveProject((prev) =>
         (prev + direction + projects.length) % projects.length
       );
       setActiveMediaIndex(0);
@@ -201,47 +288,17 @@ const WorkSamples = () => {
     }, 300);
   };
 
-  const navigate = useNavigate();
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0A0E23] to-[#1A1F3A] text-[#F0F4FF] py-12 px-4 relative overflow-hidden">
-      {/* Back button */}
-      <button 
-        onClick={() => navigate('/')}
-        className="fixed top-6 left-6 z-50 flex items-center space-x-2 bg-[#1E243D] hover:bg-[#2A3150] border border-[#2A3150] hover:border-[#6C63FF]/40 text-[#C3C8D3] hover:text-white px-4 py-2 rounded-full transition-all duration-300 shadow-lg"
-      >
-        <ArrowLeft className="w-5 h-5" />
-        <span>Back to Main</span>
-      </button>
-
-      {/* Animated background elements */}
-      <div className="fixed inset-0 pointer-events-none">
-        {[...Array(8)].map((_, i) => (
-          <div 
-            key={i}
-            className="absolute rounded-full opacity-5 bg-gradient-to-r from-[#6C63FF] to-[#4DE3C1]"
-            style={{
-              width: `${Math.random() * 400 + 100}px`,
-              height: `${Math.random() * 400 + 100}px`,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              filter: 'blur(60px)',
-              animation: `float ${Math.random() * 20 + 10}s infinite alternate ease-in-out`,
-              animationDelay: `${Math.random() * 5}s`
-            }}
-          />
-        ))}
-      </div>
-
-      <div className="max-w-6xl mx-auto relative z-10 pt-12">
-        <header className="mb-16 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+    <div className="text-[#F0F4FF] pt-12 pb-24 relative z-10 w-full">
+      <div className="max-w-6xl mx-auto">
+        <header className="mb-12 text-center">
+          <h3 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-[#6C63FF] to-[#4DE3C1] bg-clip-text text-transparent">
-              Work Samples
+              Detailed Project Views
             </span>
-          </h1>
-          <p className="text-xl text-[#C3C8D3] max-w-3xl mx-auto">
-            Selected projects showcasing my full-stack development, design, and problem-solving capabilities
+          </h3>
+          <p className="text-lg text-[#C3C8D3] max-w-3xl mx-auto">
+            Deep dive into my selected structural developments and application interfaces
           </p>
         </header>
 
@@ -284,13 +341,13 @@ const WorkSamples = () => {
 
         <div className="relative">
           {/* Project navigation arrows */}
-          <button 
+          <button
             onClick={() => navigateProject(-1)}
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 bg-[#2A3150] p-3 rounded-full hover:bg-[#3A4150] transition-all z-20 shadow-lg"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
-          <button 
+          <button
             onClick={() => navigateProject(1)}
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 bg-[#2A3150] p-3 rounded-full hover:bg-[#3A4150] transition-all z-20 shadow-lg"
           >
@@ -307,14 +364,26 @@ const WorkSamples = () => {
               <div className="relative h-80 md:h-full min-h-[400px] bg-[#0F1322] overflow-hidden">
                 {projects[activeProject].media.map((media, index) => {
                   const isActive = index === activeMediaIndex;
+                  const isYouTube = media.type === 'youtube';
                   const isVideo = media.type === 'video';
-                  
+
                   return (
-                    <div 
+                    <div
                       key={`${activeProject}-${index}`}
                       className={`absolute inset-0 transition-opacity duration-500 ${isActive ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
                     >
-                      {isVideo ? (
+                      {isYouTube ? (
+                        <div className="relative w-full h-full">
+                          <iframe
+                            src={media.url}
+                            title={media.alt}
+                            className="w-full h-full object-contain"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          ></iframe>
+                        </div>
+                      ) : isVideo ? (
                         <div className="relative w-full h-full">
                           <video
                             ref={el => {
@@ -334,7 +403,7 @@ const WorkSamples = () => {
                           </video>
                           {!isPlaying && isActive && (
                             <div className="absolute inset-0 flex items-center justify-center bg-black/20">
-                              <button 
+                              <button
                                 onClick={() => handlePlay(activeProject, index)}
                                 className="w-16 h-16 rounded-full bg-black/50 flex items-center justify-center hover:bg-black/70 transition-all"
                               >
@@ -346,7 +415,7 @@ const WorkSamples = () => {
                           )}
                         </div>
                       ) : (
-                        <img 
+                        <img
                           src={media.url}
                           alt={media.alt}
                           className="w-full h-full object-contain"
@@ -359,12 +428,12 @@ const WorkSamples = () => {
 
                 {/* Media indicators */}
                 {projects[activeProject].media.length > 1 && (
-                  <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2 z-20">
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center space-x-2 z-20 bg-black/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-xl">
                     {projects[activeProject].media.map((_, index) => (
                       <button
                         key={index}
                         onClick={() => navigateMedia(index)}
-                        className={`w-3 h-3 rounded-full transition-all ${index === activeMediaIndex ? 'bg-white w-6' : 'bg-white/30 hover:bg-white/50'}`}
+                        className={`h-2.5 rounded-full transition-all ${index === activeMediaIndex ? 'bg-[#4DE3C1] w-6' : 'bg-white/60 hover:bg-white w-2.5'}`}
                       />
                     ))}
                   </div>
@@ -397,7 +466,7 @@ const WorkSamples = () => {
 
                 <div className="flex flex-wrap gap-2">
                   {projects[activeProject].highlights.slice(0, 3).map((highlight, index) => (
-                    <span 
+                    <span
                       key={index}
                       className="text-xs bg-[#2A3150] text-[#A0A8C0] px-3 py-1 rounded-full"
                     >
@@ -424,7 +493,7 @@ const WorkSamples = () => {
         {/* All projects grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
           {projects.map((project, index) => (
-            <div 
+            <div
               key={project.id}
               onClick={() => setActiveProjectAndReset(index)}
               className={`bg-[#1E243D] rounded-2xl p-6 border cursor-pointer transition-all hover:scale-[1.02] ${activeProject === index ? 'border-[#6C63FF]' : 'border-[#2A3150] hover:border-[#6C63FF]/40'}`}
