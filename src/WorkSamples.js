@@ -84,9 +84,9 @@ const WorkSamples = () => {
       ],
       media: [
         { type: "youtube", url: "https://www.youtube.com/embed/Es_iVFYjaDQ", alt: "YUEvents demo1" },
-        { type: "image", url: "/yuprojburn.png", alt: "YUEvents placeholder" },
-        { type: "image", url: "/yuprojsched.png", alt: "YUEvents placeholder1" },
-        { type: "image", url: "/yuprojsched2.png", alt: "YUEvents placeholder2" },
+        { type: "image", url: "/yuprojburn.PNG", alt: "YUEvents placeholder" },
+        { type: "image", url: "/yuprojsched.PNG", alt: "YUEvents placeholder1" },
+        { type: "image", url: "/yuprojsched2.PNG", alt: "YUEvents placeholder2" },
       ]
     },
     {
